@@ -1,0 +1,802 @@
+[
+  {
+    "n": 1,
+    "texto": "Algo que se vende en rollo",
+    "nombreCorto": "En rollo",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 2,
+    "texto": "Una forma de preparar huevos",
+    "nombreCorto": "Huevos",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 3,
+    "texto": "Una fruta o verdura que empiece por \"P\"",
+    "nombreCorto": "Empieza por P",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 4,
+    "texto": "Algo que se vende en tubo",
+    "nombreCorto": "En tubo",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 5,
+    "texto": "Un oficio que lleva uniforme",
+    "nombreCorto": "Con uniforme",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 6,
+    "texto": "Un electrodoméstico (como la licuadora)",
+    "nombreCorto": "Electrodomésticos",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 7,
+    "texto": "Una salsa o aderezo",
+    "nombreCorto": "Salsas",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 8,
+    "texto": "Un postre que lleve chocolate",
+    "nombreCorto": "Postres con chocolate",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 9,
+    "texto": "Algo que venden en una farmacia, aparte de medicinas",
+    "nombreCorto": "Farmacia",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 10,
+    "texto": "Un vehículo con ruedas que no tenga motor",
+    "nombreCorto": "Sin motor",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 11,
+    "texto": "Una herramienta que se usa con una sola mano",
+    "nombreCorto": "Una mano",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 12,
+    "texto": "Una prenda que se pone por la cabeza",
+    "nombreCorto": "Por la cabeza",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 13,
+    "texto": "Un tipo de pasta (como los espaguetis)",
+    "nombreCorto": "Pastas",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 14,
+    "texto": "Algo que hay en un botiquín",
+    "nombreCorto": "Botiquín",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 15,
+    "texto": "Un plato típico hispano, menos tacos y paella",
+    "nombreCorto": "Platos típicos",
+    "tipo": "cerrado",
+    "tema": "vida-cotidiana",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 16,
+    "texto": "Un color con nombre de comida (como mostaza)",
+    "nombreCorto": "Colores comestibles",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 17,
+    "texto": "Una red social o app de mensajes",
+    "nombreCorto": "Redes sociales",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 18,
+    "texto": "Algo que puedes encontrar pegado en un poste",
+    "nombreCorto": "En un poste",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 19,
+    "texto": "Un accesorio que se lleva en la cabeza",
+    "nombreCorto": "En la cabeza",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 20,
+    "texto": "Una función de Instagram (como las historias)",
+    "nombreCorto": "Instagram",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 21,
+    "texto": "Una palabra en inglés que usamos en español (como \"crush\")",
+    "nombreCorto": "Anglicismos",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 22,
+    "texto": "Un lugar de la ciudad donde se puede patinar",
+    "nombreCorto": "Spots de skate",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 23,
+    "texto": "Un género musical nacido en los 90 o los 2000",
+    "nombreCorto": "Géneros 90-2000",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 24,
+    "texto": "Una pieza de un skate o de una bici (como el eje)",
+    "nombreCorto": "Piezas de ruedas",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 25,
+    "texto": "Un aparato de los 2000 que ya nadie usa (como el discman)",
+    "nombreCorto": "Gadgets Y2K",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 26,
+    "texto": "Un baile que se hizo viral, en TikTok o antes",
+    "nombreCorto": "Bailes virales",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 27,
+    "texto": "Algo para pintar un muro que no sea spray",
+    "nombreCorto": "Pintar muros",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 28,
+    "texto": "Una marca de calzado deportivo",
+    "nombreCorto": "Calzado deportivo",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 29,
+    "texto": "Un truco de skate (como el ollie)",
+    "nombreCorto": "Trucos de skate",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 30,
+    "texto": "Un artista de graffiti o arte urbano famoso",
+    "nombreCorto": "Artistas urbanos",
+    "tipo": "cerrado",
+    "tema": "urbano-y2k",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 31,
+    "texto": "Un animal con rayas o manchas",
+    "nombreCorto": "Rayas y manchas",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 32,
+    "texto": "Un animal marino que no sea un pez",
+    "nombreCorto": "No es pez",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 33,
+    "texto": "Un bicho que vuela",
+    "nombreCorto": "Bichos voladores",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 34,
+    "texto": "Una parte del cuerpo que tenemos en par",
+    "nombreCorto": "Partes en par",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 35,
+    "texto": "Algo que cae del cielo",
+    "nombreCorto": "Cae del cielo",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 36,
+    "texto": "Un país de tres sílabas",
+    "nombreCorto": "Tres sílabas",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 37,
+    "texto": "Una flor que no sea la rosa",
+    "nombreCorto": "Flores",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 38,
+    "texto": "Un ave que no vuela",
+    "nombreCorto": "Aves sin vuelo",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 39,
+    "texto": "Un objeto del espacio (como un asteroide)",
+    "nombreCorto": "Astros",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 40,
+    "texto": "Un elemento químico que sea un metal",
+    "nombreCorto": "Metales",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 41,
+    "texto": "Un animal que pone huevos y no es un ave",
+    "nombreCorto": "Huevos sin plumas",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 42,
+    "texto": "Un árbol que no dé fruta",
+    "nombreCorto": "Árboles sin fruta",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 43,
+    "texto": "Un hueso del cuerpo humano",
+    "nombreCorto": "Huesos",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 44,
+    "texto": "Un dinosaurio que no sea el T-Rex",
+    "nombreCorto": "Dinosaurios",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 45,
+    "texto": "Una piedra preciosa o semipreciosa",
+    "nombreCorto": "Gemas",
+    "tipo": "cerrado",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 46,
+    "texto": "Un deporte que se juega con pelota",
+    "nombreCorto": "Con pelota",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 47,
+    "texto": "Un superpoder de algún superhéroe",
+    "nombreCorto": "Superpoderes",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 48,
+    "texto": "Una golosina de tu infancia",
+    "nombreCorto": "Golosinas",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 49,
+    "texto": "Un juego de recreo que no necesita nada",
+    "nombreCorto": "Recreo",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 50,
+    "texto": "Algo que hay en un cumpleaños infantil",
+    "nombreCorto": "Cumpleaños",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 51,
+    "texto": "Un videojuego de Nintendo",
+    "nombreCorto": "Nintendo",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 52,
+    "texto": "Una película de Pixar",
+    "nombreCorto": "Pixar",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 53,
+    "texto": "Un juego de mesa (como el Monopoly)",
+    "nombreCorto": "Juegos de mesa",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 54,
+    "texto": "Un personaje de Mario Bros. (como Toad)",
+    "nombreCorto": "Mundo Mario",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 55,
+    "texto": "Un lugar del universo de Harry Potter",
+    "nombreCorto": "Harry Potter",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 56,
+    "texto": "Una criatura fantástica que vuela",
+    "nombreCorto": "Criaturas voladoras",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 57,
+    "texto": "Un género de serie o de anime",
+    "nombreCorto": "Géneros de series",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 58,
+    "texto": "Una canción en español de los 2000",
+    "nombreCorto": "Hits 2000",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 59,
+    "texto": "Una posición o jugada del fútbol",
+    "nombreCorto": "Jugadas de fútbol",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 60,
+    "texto": "Un villano de Disney",
+    "nombreCorto": "Villanos Disney",
+    "tipo": "cerrado",
+    "tema": "pop-ocio",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 61,
+    "texto": "Una excusa para llegar tarde que nadie te creería",
+    "nombreCorto": "Excusas",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 62,
+    "texto": "Algo que nunca falta en casa de una abuela",
+    "nombreCorto": "Casa de la abuela",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 63,
+    "texto": "Lo primero que comprarías si ganas la lotería",
+    "nombreCorto": "Lotería",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 64,
+    "texto": "Si los lunes fueran una comida, ¿cuál serían?",
+    "nombreCorto": "Lunes",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 65,
+    "texto": "El plan perfecto para un domingo de lluvia",
+    "nombreCorto": "Día de lluvia",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "facil"
+  },
+  {
+    "n": 66,
+    "texto": "El peor regalo para un primer aniversario",
+    "nombreCorto": "Mal regalo",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 67,
+    "texto": "Lo que da más vergüenza ajena en una boda",
+    "nombreCorto": "Vergüenza ajena",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 68,
+    "texto": "Un nombre para un gato que odia los lunes",
+    "nombreCorto": "Gato gruñón",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 69,
+    "texto": "Un olor que te devuelve a tu infancia",
+    "nombreCorto": "Olor de infancia",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "medio"
+  },
+  {
+    "n": 70,
+    "texto": "Un superpoder que solo sirva en la cocina",
+    "nombreCorto": "Poder de cocina",
+    "tipo": "abierto",
+    "tema": "vida-cotidiana",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 71,
+    "texto": "Un nombre para una crew de graffiti de abuelas",
+    "nombreCorto": "Crew de abuelas",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 72,
+    "texto": "Una palabra que pintarías en el muro de tu escuela",
+    "nombreCorto": "Mensaje al muro",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 73,
+    "texto": "Lo que suena en tus auriculares de camino a casa",
+    "nombreCorto": "Banda sonora",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 74,
+    "texto": "Un apodo para el vecino que taladra los domingos",
+    "nombreCorto": "Vecino ruidoso",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 75,
+    "texto": "El nombre de tu banda de música de garaje",
+    "nombreCorto": "Banda de garaje",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "facil"
+  },
+  {
+    "n": 76,
+    "texto": "Un nombre para la tabla de skate de tu mascota",
+    "nombreCorto": "Tabla de mascota",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 77,
+    "texto": "Una palabra que suene a 2003",
+    "nombreCorto": "Vibra Y2K",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 78,
+    "texto": "Lo que guardarías en una cápsula del tiempo para el 2050",
+    "nombreCorto": "Cápsula del tiempo",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 79,
+    "texto": "Algo que ves desde una azotea al atardecer",
+    "nombreCorto": "Azotea",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "medio"
+  },
+  {
+    "n": 80,
+    "texto": "Una palabra que rime con \"muro\"",
+    "nombreCorto": "Rima con muro",
+    "tipo": "abierto",
+    "tema": "urbano-y2k",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 81,
+    "texto": "Lo único que extrañarías de la Tierra viviendo en Marte",
+    "nombreCorto": "Desde Marte",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 82,
+    "texto": "Un animal que sería el peor compañero de piso",
+    "nombreCorto": "Compañero de piso",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 83,
+    "texto": "Algo que nadie espera encontrar en el fondo del mar",
+    "nombreCorto": "Fondo del mar",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 84,
+    "texto": "Lo que más miedo te daría escuchar en un bosque de noche",
+    "nombreCorto": "Bosque de noche",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 85,
+    "texto": "Algo que se derrite y no es comida",
+    "nombreCorto": "Se derrite",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "facil"
+  },
+  {
+    "n": 86,
+    "texto": "La primera palabra que diría tu mascota si hablara",
+    "nombreCorto": "Mascota habla",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 87,
+    "texto": "Algo que te gustaría que brillara en la oscuridad",
+    "nombreCorto": "Brilla de noche",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 88,
+    "texto": "Un nombre para una estrella recién descubierta",
+    "nombreCorto": "Estrella nueva",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "medio"
+  },
+  {
+    "n": 89,
+    "texto": "Un invento que arreglaría tu mañana",
+    "nombreCorto": "Invento futuro",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 90,
+    "texto": "Una palabra para el olor de la lluvia sobre el asfalto",
+    "nombreCorto": "Olor a lluvia",
+    "tipo": "abierto",
+    "tema": "naturaleza-ciencia",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 91,
+    "texto": "Lo único que llevarías a una isla desierta",
+    "nombreCorto": "Isla desierta",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 92,
+    "texto": "Algo que no puede faltar en una pijamada",
+    "nombreCorto": "Pijamada",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 93,
+    "texto": "El snack perfecto para una maratón de anime",
+    "nombreCorto": "Snack de anime",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 94,
+    "texto": "Lo que harías si se va la luz en toda la ciudad",
+    "nombreCorto": "Apagón",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 95,
+    "texto": "El premio más raro que ganarías en una feria",
+    "nombreCorto": "Premio de feria",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "facil"
+  },
+  {
+    "n": 96,
+    "texto": "El plan secreto de un villano de caricatura",
+    "nombreCorto": "Plan de villano",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 97,
+    "texto": "Un nombre para un videojuego de skate",
+    "nombreCorto": "Juego de skate",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 98,
+    "texto": "Un trofeo que te darían en tu casa",
+    "nombreCorto": "Trofeo casero",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "medio"
+  },
+  {
+    "n": 99,
+    "texto": "Un hechizo para ordenar tu cuarto",
+    "nombreCorto": "Hechizo",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "dificil"
+  },
+  {
+    "n": 100,
+    "texto": "La última palabra de una película de terror",
+    "nombreCorto": "Final de peli",
+    "tipo": "abierto",
+    "tema": "pop-ocio",
+    "dificultad": "dificil"
+  }
+]

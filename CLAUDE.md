@@ -11,6 +11,7 @@ Son la fuente de verdad del diseño. Consúltalos ante cualquier duda antes de i
 | [Ficha de identidad](https://claude.ai/code/artifact/a02b8e71-f70c-4577-a2cb-16edae01f250)         | Concepto, mecánica, reglas, graffímetro, Mika, vocabulario, estética, sonido y música |
 | [Decisiones técnicas](https://claude.ai/code/artifact/f8d56113-368d-4411-b196-54c0e330f7e2)        | Stack, arquitectura, dependencias, modelo de datos y alcance de la demo               |
 | [Hoja de ruta](https://claude.ai/code/artifact/6f6ab045-a3dd-41ce-a3d2-9906697744ec)               | Fases e hitos (vista compartible)                                                     |
+| [Catálogo de muros](https://claude.ai/code/artifact/5501aa23-1c68-496d-afec-2d0788dd0943)          | Los 100 muros validados y sus criterios; los datos viven en `data/muros.json`         |
 | `ROADMAP.md`                                                                                       | Estado de cada hito: **fuente de verdad del avance**                                  |
 | [Ficha archivada de La Puja](https://claude.ai/code/artifact/62430798-9f33-4d9d-b22b-738ebda18d63) | Solo como referencia histórica; no se usa para diseñar                                |
 

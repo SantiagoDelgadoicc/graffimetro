@@ -29,8 +29,10 @@ Meta: el proyecto vacío arranca en el navegador, está en GitHub y tiene Postgr
 Meta: la base de datos tiene sus tablas y los 100 muros validados están cargados.
 
 - [x] **H07 · Esquema de base de datos** — tablas `lotes` (los muros), `tasaciones` y `ofertas` creadas por migración.
-- [ ] **H08 · Catálogo de 100 muros** — documento con 60 cerrados y 40 abiertos, con nombre corto, validado por el usuario.
-  - Preguntar antes: temas obligatorios; temas prohibidos; nivel de dificultad.
+- [x] **H08 · Catálogo de 100 muros** — documento con 60 cerrados y 40 abiertos, con nombre corto, validado por el usuario.
+  - Preguntar antes: temas obligatorios; temas prohibidos; nivel de dificultad. → Obligatorios: vida cotidiana, cultura urbana y Y2K, naturaleza y ciencia, cultura pop y ocio. Prohibidos: política y religión, contenido sexual o violento. Dificultad: ~50% fáciles, 35% medios, 15% difíciles.
+  - Documento: https://claude.ai/code/artifact/5501aa23-1c68-496d-afec-2d0788dd0943 · Datos: `data/muros.json`.
+  - Nota para H09: `lotes` no tiene columnas de tema ni dificultad; decidir si se añaden (migración) o se quedan solo en el JSON.
 - [ ] **H09 · Carga del catálogo** — script de semilla que carga los 100 muros; una consulta de prueba devuelve 100.
 
 ## Fase 2 — Motor de evaluación
@@ -123,3 +125,4 @@ Meta: demo local probada, pulida y marcada como v0.1.
 - 2026-10-15 · H05 · Prettier 3.9 (+ eslint-config-prettier), Vitest 5 con alias `@/`, scripts `check`/`typecheck`/`lint`/`format`/`test`. `@types/node` subido a ^24 (alineado con Node 24; lo pedía Vitest). `npm run check` en verde, 2 tests. Audit: 0 vulnerabilidades en producción; las 5 de ESLint son solo de desarrollo y sin arreglo disponible. · Completado
 - 2026-10-15 · H06 · Postgres 18.6 (`postgres:18-alpine`) en Docker, solo en 127.0.0.1:5432, con volumen persistente y healthcheck. Drizzle ORM 0.45 + driver `postgres` 3.4 + drizzle-kit 0.31. Cliente en `src/db/index.ts`; `npm run db:check` conecta OK. `.env.example` creado. `npm run check` en verde. · Completado
 - 2026-10-15 · H07 · Esquema Drizzle (`src/db/schema.ts`): `lotes`, `tasaciones` (caché solo con la opinión de la IA, única por muro + palabra normalizada) y `ofertas` (resultado calculado al jugar: nota, combo, seguidores). Enums `tipo_muro` y `proveedor_ia`, checks de rango e índices. Migración `0000_esquema_inicial` aplicada; restricciones probadas en una transacción revertida. Decisión del usuario: caché = IA, jugada = resultado (doc técnico actualizado). · Completado
+- 2026-10-15 · H08 · Catálogo de 100 muros (60 cerrados, 40 abiertos; 25 por tema; 50/35/15 de dificultad), reescrito con "ganchos" al estilo Krillion (restricción, contenedor, pista, nicho, exclusión) y validado por el usuario. Marcas y obras conocidas permitidas. Guardado en `data/muros.json` (100 textos únicos, comprobado). `npm run check` en verde. · Completado
