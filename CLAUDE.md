@@ -58,6 +58,7 @@ El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), Rea
 - **Comprobación completa:** `npm run check` (tipos + ESLint + formato de Prettier + tests de Vitest). Tiene que pasar en verde antes de cerrar cualquier hito.
 - Por separado: `npm run typecheck`, `npm run lint`, `npm run format` (aplica el formato) y `npm test`.
 - **Base de datos:** Postgres 18 en Docker (`docker-compose.yml`, contenedor `graffimetro-db`, solo en 127.0.0.1:5432). Necesita Docker Desktop abierto. Usa `npm run db:up` para arrancarla, `npm run db:down` para pararla (los datos se conservan en el volumen) y `npm run db:check` para comprobar la conexión desde Drizzle. El cliente del juego está en `src/db/index.ts` y es solo para el servidor.
+- **Esquema y migraciones:** el esquema vive en `src/db/schema.ts`. Al cambiarlo, ejecuta `npm run db:generate -- --name <descripcion>` (crea el SQL en `drizzle/`, que no se edita a mano) y luego `npm run db:migrate`. Para ver los datos, `npm run db:studio`. La caché (`tasaciones`) guarda solo la opinión de la IA; el combo y los seguidores se calculan al jugar y se guardan en `ofertas`.
 - Variables de entorno: plantilla en `.env.example` (sin secretos); los valores reales van en `.env.local`.
 - Los tests van junto al código, como `src/**/*.test.ts`. El alias `@/` apunta a `src/`.
 - `npm audit` marca 5 alertas "high" en la cadena de ESLint (`braces`). Son solo de desarrollo; las dependencias de producción tienen 0 vulnerabilidades. No apliques `npm audit fix --force`, porque baja eslint-config-next a la v14 y la rompe.

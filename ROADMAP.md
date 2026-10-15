@@ -28,7 +28,7 @@ Meta: el proyecto vacío arranca en el navegador, está en GitHub y tiene Postgr
 
 Meta: la base de datos tiene sus tablas y los 100 muros validados están cargados.
 
-- [ ] **H07 · Esquema de base de datos** — tablas `lotes` (los muros), `tasaciones` y `ofertas` creadas por migración.
+- [x] **H07 · Esquema de base de datos** — tablas `lotes` (los muros), `tasaciones` y `ofertas` creadas por migración.
 - [ ] **H08 · Catálogo de 100 muros** — documento con 60 cerrados y 40 abiertos, con nombre corto, validado por el usuario.
   - Preguntar antes: temas obligatorios; temas prohibidos; nivel de dificultad.
 - [ ] **H09 · Carga del catálogo** — script de semilla que carga los 100 muros; una consulta de prueba devuelve 100.
@@ -122,3 +122,4 @@ Meta: demo local probada, pulida y marcada como v0.1.
 - 2026-10-15 · H04 · Next.js 16.4.1 + React 19.3 + Tailwind 4 (src/, App Router, TypeScript). Página "Graffímetro" en localhost:3000 sin errores; `tsc` OK. Nota para H05: 5 alertas "high" de npm audit en la cadena de ESLint (braces), solo de desarrollo; no aplicar `audit fix --force` (baja eslint-config-next a v14). · Completado
 - 2026-10-15 · H05 · Prettier 3.9 (+ eslint-config-prettier), Vitest 5 con alias `@/`, scripts `check`/`typecheck`/`lint`/`format`/`test`. `@types/node` subido a ^24 (alineado con Node 24; lo pedía Vitest). `npm run check` en verde, 2 tests. Audit: 0 vulnerabilidades en producción; las 5 de ESLint son solo de desarrollo y sin arreglo disponible. · Completado
 - 2026-10-15 · H06 · Postgres 18.6 (`postgres:18-alpine`) en Docker, solo en 127.0.0.1:5432, con volumen persistente y healthcheck. Drizzle ORM 0.45 + driver `postgres` 3.4 + drizzle-kit 0.31. Cliente en `src/db/index.ts`; `npm run db:check` conecta OK. `.env.example` creado. `npm run check` en verde. · Completado
+- 2026-10-15 · H07 · Esquema Drizzle (`src/db/schema.ts`): `lotes`, `tasaciones` (caché solo con la opinión de la IA, única por muro + palabra normalizada) y `ofertas` (resultado calculado al jugar: nota, combo, seguidores). Enums `tipo_muro` y `proveedor_ia`, checks de rango e índices. Migración `0000_esquema_inicial` aplicada; restricciones probadas en una transacción revertida. Decisión del usuario: caché = IA, jugada = resultado (doc técnico actualizado). · Completado

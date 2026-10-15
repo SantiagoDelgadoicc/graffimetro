@@ -1,0 +1,430 @@
+{
+  "id": "014a4b6f-5ff6-4224-b5ee-12f3a7a6b3c7",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.lotes": {
+      "name": "lotes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "lotes_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "texto": {
+          "name": "texto",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nombre_corto": {
+          "name": "nombre_corto",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "tipo_muro",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "lotes_texto_unico": {
+          "name": "lotes_texto_unico",
+          "columns": [
+            {
+              "expression": "texto",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.ofertas": {
+      "name": "ofertas",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "ofertas_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "partida_id": {
+          "name": "partida_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lote_id": {
+          "name": "lote_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "texto_escrito": {
+          "name": "texto_escrito",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "palabra_normalizada": {
+          "name": "palabra_normalizada",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tasacion_id": {
+          "name": "tasacion_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "es_reintento": {
+          "name": "es_reintento",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "nota": {
+          "name": "nota",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "combo": {
+          "name": "combo",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "seguidores": {
+          "name": "seguidores",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "ofertas_partida_idx": {
+          "name": "ofertas_partida_idx",
+          "columns": [
+            {
+              "expression": "partida_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "ofertas_lote_idx": {
+          "name": "ofertas_lote_idx",
+          "columns": [
+            {
+              "expression": "lote_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "ofertas_lote_id_lotes_id_fk": {
+          "name": "ofertas_lote_id_lotes_id_fk",
+          "tableFrom": "ofertas",
+          "tableTo": "lotes",
+          "columnsFrom": [
+            "lote_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "ofertas_tasacion_id_tasaciones_id_fk": {
+          "name": "ofertas_tasacion_id_tasaciones_id_fk",
+          "tableFrom": "ofertas",
+          "tableTo": "tasaciones",
+          "columnsFrom": [
+            "tasacion_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "ofertas_nota_rango": {
+          "name": "ofertas_nota_rango",
+          "value": "\"ofertas\".\"nota\" is null or \"ofertas\".\"nota\" between 0 and 100"
+        },
+        "ofertas_combo_rango": {
+          "name": "ofertas_combo_rango",
+          "value": "\"ofertas\".\"combo\" is null or \"ofertas\".\"combo\" between 1 and 7"
+        },
+        "ofertas_seguidores_positivos": {
+          "name": "ofertas_seguidores_positivos",
+          "value": "\"ofertas\".\"seguidores\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.tasaciones": {
+      "name": "tasaciones",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "tasaciones_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "lote_id": {
+          "name": "lote_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "palabra_normalizada": {
+          "name": "palabra_normalizada",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "valida": {
+          "name": "valida",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "forma_canonica": {
+          "name": "forma_canonica",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rareza_ia": {
+          "name": "rareza_ia",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ingenio_ia": {
+          "name": "ingenio_ia",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "comentario": {
+          "name": "comentario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "proveedor": {
+          "name": "proveedor",
+          "type": "proveedor_ia",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "modelo": {
+          "name": "modelo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "tasaciones_lote_palabra_unico": {
+          "name": "tasaciones_lote_palabra_unico",
+          "columns": [
+            {
+              "expression": "lote_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "palabra_normalizada",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "tasaciones_lote_canonica_idx": {
+          "name": "tasaciones_lote_canonica_idx",
+          "columns": [
+            {
+              "expression": "lote_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "forma_canonica",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "tasaciones_lote_id_lotes_id_fk": {
+          "name": "tasaciones_lote_id_lotes_id_fk",
+          "tableFrom": "tasaciones",
+          "tableTo": "lotes",
+          "columnsFrom": [
+            "lote_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "tasaciones_rareza_rango": {
+          "name": "tasaciones_rareza_rango",
+          "value": "\"tasaciones\".\"rareza_ia\" between 0 and 100"
+        },
+        "tasaciones_ingenio_rango": {
+          "name": "tasaciones_ingenio_rango",
+          "value": "\"tasaciones\".\"ingenio_ia\" between 0 and 100"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.proveedor_ia": {
+      "name": "proveedor_ia",
+      "schema": "public",
+      "values": [
+        "groq",
+        "gemini"
+      ]
+    },
+    "public.tipo_muro": {
+      "name": "tipo_muro",
+      "schema": "public",
+      "values": [
+        "cerrado",
+        "abierto"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

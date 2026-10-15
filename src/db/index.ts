@@ -1,5 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
+import * as schema from "./schema";
 
 const url = process.env.DATABASE_URL;
 if (!url) {
@@ -13,4 +14,4 @@ const conexion = globalParaDb.conexionPg ?? postgres(url);
 if (process.env.NODE_ENV !== "production") globalParaDb.conexionPg = conexion;
 
 /** Cliente de Drizzle para usar solo en el servidor. */
-export const db = drizzle(conexion);
+export const db = drizzle(conexion, { schema });
