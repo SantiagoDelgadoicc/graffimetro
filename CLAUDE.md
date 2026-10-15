@@ -3,19 +3,21 @@
 Juego web en español. Mika, una skater, propone un tema ("muro"). El jugador escribe una palabra, que se pinta como graffiti en un muro de la ciudad. Cuanto más rara o ingeniosa sea, más alto sube el graffímetro (x1–x7) y más seguidores gana. Lema: "Tu palabra, tu pieza.". (Antes se llamaba "La Puja"; ese concepto está archivado.)
 
 ## Documentos de referencia
+
 Son la fuente de verdad del diseño. Consúltalos ante cualquier duda antes de inventar nada.
 
-| Documento | Contenido |
-| --- | --- |
-| [Ficha de identidad](https://claude.ai/code/artifact/a02b8e71-f70c-4577-a2cb-16edae01f250) | Concepto, mecánica, reglas, graffímetro, Mika, vocabulario, estética, sonido y música |
-| [Decisiones técnicas](https://claude.ai/code/artifact/f8d56113-368d-4411-b196-54c0e330f7e2) | Stack, arquitectura, dependencias, modelo de datos y alcance de la demo |
-| [Hoja de ruta](https://claude.ai/code/artifact/6f6ab045-a3dd-41ce-a3d2-9906697744ec) | Fases e hitos (vista compartible) |
-| `ROADMAP.md` | Estado de cada hito: **fuente de verdad del avance** |
-| [Ficha archivada de La Puja](https://claude.ai/code/artifact/62430798-9f33-4d9d-b22b-738ebda18d63) | Solo como referencia histórica; no se usa para diseñar |
+| Documento                                                                                          | Contenido                                                                             |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [Ficha de identidad](https://claude.ai/code/artifact/a02b8e71-f70c-4577-a2cb-16edae01f250)         | Concepto, mecánica, reglas, graffímetro, Mika, vocabulario, estética, sonido y música |
+| [Decisiones técnicas](https://claude.ai/code/artifact/f8d56113-368d-4411-b196-54c0e330f7e2)        | Stack, arquitectura, dependencias, modelo de datos y alcance de la demo               |
+| [Hoja de ruta](https://claude.ai/code/artifact/6f6ab045-a3dd-41ce-a3d2-9906697744ec)               | Fases e hitos (vista compartible)                                                     |
+| `ROADMAP.md`                                                                                       | Estado de cada hito: **fuente de verdad del avance**                                  |
+| [Ficha archivada de La Puja](https://claude.ai/code/artifact/62430798-9f33-4d9d-b22b-738ebda18d63) | Solo como referencia histórica; no se usa para diseñar                                |
 
 Los documentos de Claude se leen y editan con las herramientas del conector de documentos, nunca con fetch. Si en una sesión no está ese conector, basta con `ROADMAP.md` para trabajar; en ese caso, avisa al usuario de que el documento compartido no se ha actualizado.
 
 ## Protocolo de cada ronda de desarrollo
+
 Se sigue siempre, en este orden:
 
 1. **Lee `ROADMAP.md`** y localiza el hito activo: el primer `[~]` (a medias) o, si no hay ninguno, el primer `[ ]` (pendiente). Dile al usuario qué hito toca y en qué estado está.
@@ -31,6 +33,7 @@ Se sigue siempre, en este orden:
 Si una decisión nueva cambia el diseño, actualiza también la ficha o el documento técnico correspondiente, para que nunca contradigan al código.
 
 ## Decisiones clave (resumen; el detalle está en los documentos)
+
 - **Stack:** TypeScript, Next.js (App Router), React + PixiJS, `motion`, Tone.js (música adaptativa y combos a tempo), `howler` (efectos sueltos), Postgres en Docker + Drizzle y Vitest.
 - **IA:** AI SDK de Vercel. El modelo principal es Groq `openai/gpt-oss-120b`; Gemini Flash-Lite hace de respaldo cuando Groq da error de límite. Todo en capas gratuitas.
 - **Demo:** solo en local, con la partida de 6 muros. Coste: $0.
@@ -48,12 +51,17 @@ Si una decisión nueva cambia el diseño, actualiza también la ficha o el docum
 - **Nombres internos:** la tabla de muros se llama `lotes` en la base de datos.
 
 ## Next.js 16
+
 El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), React 19 y Tailwind CSS 4. Esta versión trae cambios importantes respecto a versiones anteriores. Antes de escribir código de Next, lee `AGENTS.md` y la guía correspondiente en `node_modules/next/dist/docs/`.
 
 - Arrancar en desarrollo: `npm run dev` (http://localhost:3000). También está la configuración `graffimetro-dev` en `.claude/launch.json`.
-- Comprobar tipos: `npx tsc --noEmit`.
+- **Comprobación completa:** `npm run check` (tipos + ESLint + formato de Prettier + tests de Vitest). Tiene que pasar en verde antes de cerrar cualquier hito.
+- Por separado: `npm run typecheck`, `npm run lint`, `npm run format` (aplica el formato) y `npm test`.
+- Los tests van junto al código, como `src/**/*.test.ts`. El alias `@/` apunta a `src/`.
+- `npm audit` marca 5 alertas "high" en la cadena de ESLint (`braces`). Son solo de desarrollo; las dependencias de producción tienen 0 vulnerabilidades. No apliques `npm audit fix --force`, porque baja eslint-config-next a la v14 y la rompe.
 
 ## Convenciones
+
 - Todo el texto del juego va en **español neutro panhispano**, con la voz de Mika (amiga cozy con sorna, que llama "crew" al jugador) y el vocabulario de la ficha: muro, pieza, combo, seguidores, crew.
 - Paleta atardecer pastel como variables CSS: `#B8A4D9`, `#F6B89A`, `#9ED9C3`, `#F7E3A1`, `#F27BAA`, `#2D2A5A`.
 - Estética: pixel art hi-bit, revival Y2K urbano de skate y graffiti, colorido y cozy.
@@ -63,5 +71,6 @@ El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), Rea
 - Si en fases futuras se trabaja con la API de Claude, consulta los modelos y precios actuales en lugar de fiarte de la memoria.
 
 ## Comunicación con el usuario
+
 - Responde en español.
 - Las decisiones se consultan con preguntas de selección; las explicaciones, breves y en lenguaje claro.

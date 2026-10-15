@@ -10,20 +10,22 @@ Este archivo es la **fuente de verdad** del avance. El documento compartido
 ---
 
 ## Fase 0 — Preparación del entorno
+
 Meta: el proyecto vacío arranca en el navegador, está en GitHub y tiene Postgres conectado.
 
-- [x] **H01 · Node.js** — `node -v` y `npm -v` responden. *(Lo instala el usuario.)*
-- [x] **H02 · Claves de IA** — `.env.local` con las claves de Groq y Gemini; límites reales anotados en este archivo. *(Las crea el usuario.)*
+- [x] **H01 · Node.js** — `node -v` y `npm -v` responden. _(Lo instala el usuario.)_
+- [x] **H02 · Claves de IA** — `.env.local` con las claves de Groq y Gemini; límites reales anotados en este archivo. _(Las crea el usuario.)_
   - Groq `openai/gpt-oss-120b`: 1.000 peticiones/día, 8.000 tokens/min (cabeceras de la API, 2026-10-15).
   - Gemini `gemini-3.5-flash-lite` (modelo fijado, no el alias `-latest`): 15 peticiones/min, 250.000 tokens/min, 500 peticiones/día (panel de AI Studio, 2026-10-15). La cuota es del proyecto "Default Gemini Project", compartida con otros usos.
 - [x] **H03 · Git y GitHub** — repositorio local con `.gitignore` y primer commit subido a GitHub.
   - Preguntar antes: nombre del repositorio; privado o público. → `graffimetro`, público: https://github.com/SantiagoDelgadoicc/graffimetro
 - [x] **H04 · Proyecto Next.js** — página en blanco funcionando en `localhost`.
   - Preguntar antes: estilos con Tailwind o con CSS Modules. → Tailwind CSS 4.
-- [ ] **H05 · Herramientas de calidad** — ESLint, Prettier y Vitest, con un test de ejemplo en verde.
+- [x] **H05 · Herramientas de calidad** — ESLint, Prettier y Vitest, con un test de ejemplo en verde.
 - [ ] **H06 · Postgres en Docker** — contenedor arriba y conexión comprobada desde Drizzle.
 
 ## Fase 1 — Datos y catálogo
+
 Meta: la base de datos tiene sus tablas y los 100 muros validados están cargados.
 
 - [ ] **H07 · Esquema de base de datos** — tablas `lotes` (los muros), `tasaciones` y `ofertas` creadas por migración.
@@ -32,6 +34,7 @@ Meta: la base de datos tiene sus tablas y los 100 muros validados están cargado
 - [ ] **H09 · Carga del catálogo** — script de semilla que carga los 100 muros; una consulta de prueba devuelve 100.
 
 ## Fase 2 — Motor de evaluación
+
 Meta: una palabra enviada a la API vuelve evaluada (nota, combo, seguidores, comentario de Mika), cacheada y registrada, todavía sin interfaz.
 
 - [ ] **H10 · Normalización básica** — función que unifica mayúsculas, espacios y tildes, con tests.
@@ -48,6 +51,7 @@ Meta: una palabra enviada a la API vuelve evaluada (nota, combo, seguidores, com
   - Preguntar antes: ¿se siente justa la evaluación? Qué casos ajustar.
 
 ## Fase 3 — Bucle de juego jugable
+
 Meta: partida de 6 muros jugable de principio a fin, sin arte ("demo fea").
 
 - [ ] **H19 · Estado de la partida** — 6 muros aleatorios sin repetir y seguidores acumulados, con tests.
@@ -58,6 +62,7 @@ Meta: partida de 6 muros jugable de principio a fin, sin arte ("demo fea").
   - Preguntar antes: textos de la portada.
 
 ## Fase 4 — Identidad visual
+
 Meta: la demo se ve como Graffímetro (barrio en pixel art, atardecer pastel, Mika animada, piezas en 7 estilos).
 
 - [ ] **H24 · Base visual** — fuente de interfaz, paleta atardecer pastel como variables y fondo del barrio.
@@ -76,6 +81,7 @@ Meta: la demo se ve como Graffímetro (barrio en pixel art, atardecer pastel, Mi
 - [ ] **H33 · Móvil** — todo jugable y legible en móvil, con el teclado abierto.
 
 ## Fase 5 — Sonido
+
 Meta: cada combo suena con spray y power stab a tempo, y la música breakbeat crece con la rareza.
 
 - [ ] **H34 · Sistema de audio** — Tone.js, reloj de tempo común y botón de silencio que se recuerda.
@@ -87,6 +93,7 @@ Meta: cada combo suena con spray y power stab a tempo, y la música breakbeat cr
 - [ ] **H38 · Ambiente** — ruedas de skate, pájaros al atardecer, murmullo de barrio.
 
 ## Fase 6 — Cierre de la demo
+
 Meta: demo local probada, pulida y marcada como v0.1.
 
 - [ ] **H39 · Prueba y pulido** — partidas de prueba completas, lista de errores, críticos corregidos.
@@ -105,9 +112,12 @@ Meta: demo local probada, pulida y marcada como v0.1.
 ---
 
 ## Registro de rondas
+
 <!-- Una línea por ronda: fecha · hito · qué se hizo · estado resultante -->
+
 - 2026-10-15 · — · Cambio de concepto: La Puja → Graffímetro. Hoja de ruta rehecha (40 hitos). · Sin hitos empezados
 - 2026-10-15 · H01 · Node.js v24.20.0 y npm 11.19.0 instalados y comprobados. Sin commit: Git llega en H03. · Completado
 - 2026-10-15 · H02 · Claves de Groq y Gemini en `.env.local`, llamadas de prueba OK con los dos modelos, límites reales anotados. Sin commit: Git llega en H03. · Completado
 - 2026-10-15 · H03 · Repo `graffimetro` público en GitHub; `.gitignore` (claves excluidas) y `.gitattributes` (LF). Primer commit incluye H01-H03. · Completado
 - 2026-10-15 · H04 · Next.js 16.4.1 + React 19.3 + Tailwind 4 (src/, App Router, TypeScript). Página "Graffímetro" en localhost:3000 sin errores; `tsc` OK. Nota para H05: 5 alertas "high" de npm audit en la cadena de ESLint (braces), solo de desarrollo; no aplicar `audit fix --force` (baja eslint-config-next a v14). · Completado
+- 2026-10-15 · H05 · Prettier 3.9 (+ eslint-config-prettier), Vitest 5 con alias `@/`, scripts `check`/`typecheck`/`lint`/`format`/`test`. `@types/node` subido a ^24 (alineado con Node 24; lo pedía Vitest). `npm run check` en verde, 2 tests. Audit: 0 vulnerabilidades en producción; las 5 de ESLint son solo de desarrollo y sin arreglo disponible. · Completado
