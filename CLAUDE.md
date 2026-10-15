@@ -57,6 +57,8 @@ El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), Rea
 - Arrancar en desarrollo: `npm run dev` (http://localhost:3000). También está la configuración `graffimetro-dev` en `.claude/launch.json`.
 - **Comprobación completa:** `npm run check` (tipos + ESLint + formato de Prettier + tests de Vitest). Tiene que pasar en verde antes de cerrar cualquier hito.
 - Por separado: `npm run typecheck`, `npm run lint`, `npm run format` (aplica el formato) y `npm test`.
+- **Base de datos:** Postgres 18 en Docker (`docker-compose.yml`, contenedor `graffimetro-db`, solo en 127.0.0.1:5432). Necesita Docker Desktop abierto. Usa `npm run db:up` para arrancarla, `npm run db:down` para pararla (los datos se conservan en el volumen) y `npm run db:check` para comprobar la conexión desde Drizzle. El cliente del juego está en `src/db/index.ts` y es solo para el servidor.
+- Variables de entorno: plantilla en `.env.example` (sin secretos); los valores reales van en `.env.local`.
 - Los tests van junto al código, como `src/**/*.test.ts`. El alias `@/` apunta a `src/`.
 - `npm audit` marca 5 alertas "high" en la cadena de ESLint (`braces`). Son solo de desarrollo; las dependencias de producción tienen 0 vulnerabilidades. No apliques `npm audit fix --force`, porque baja eslint-config-next a la v14 y la rompe.
 

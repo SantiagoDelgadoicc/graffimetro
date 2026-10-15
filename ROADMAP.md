@@ -22,7 +22,7 @@ Meta: el proyecto vacío arranca en el navegador, está en GitHub y tiene Postgr
 - [x] **H04 · Proyecto Next.js** — página en blanco funcionando en `localhost`.
   - Preguntar antes: estilos con Tailwind o con CSS Modules. → Tailwind CSS 4.
 - [x] **H05 · Herramientas de calidad** — ESLint, Prettier y Vitest, con un test de ejemplo en verde.
-- [ ] **H06 · Postgres en Docker** — contenedor arriba y conexión comprobada desde Drizzle.
+- [x] **H06 · Postgres en Docker** — contenedor arriba y conexión comprobada desde Drizzle.
 
 ## Fase 1 — Datos y catálogo
 
@@ -121,3 +121,4 @@ Meta: demo local probada, pulida y marcada como v0.1.
 - 2026-10-15 · H03 · Repo `graffimetro` público en GitHub; `.gitignore` (claves excluidas) y `.gitattributes` (LF). Primer commit incluye H01-H03. · Completado
 - 2026-10-15 · H04 · Next.js 16.4.1 + React 19.3 + Tailwind 4 (src/, App Router, TypeScript). Página "Graffímetro" en localhost:3000 sin errores; `tsc` OK. Nota para H05: 5 alertas "high" de npm audit en la cadena de ESLint (braces), solo de desarrollo; no aplicar `audit fix --force` (baja eslint-config-next a v14). · Completado
 - 2026-10-15 · H05 · Prettier 3.9 (+ eslint-config-prettier), Vitest 5 con alias `@/`, scripts `check`/`typecheck`/`lint`/`format`/`test`. `@types/node` subido a ^24 (alineado con Node 24; lo pedía Vitest). `npm run check` en verde, 2 tests. Audit: 0 vulnerabilidades en producción; las 5 de ESLint son solo de desarrollo y sin arreglo disponible. · Completado
+- 2026-10-15 · H06 · Postgres 18.6 (`postgres:18-alpine`) en Docker, solo en 127.0.0.1:5432, con volumen persistente y healthcheck. Drizzle ORM 0.45 + driver `postgres` 3.4 + drizzle-kit 0.31. Cliente en `src/db/index.ts`; `npm run db:check` conecta OK. `.env.example` creado. `npm run check` en verde. · Completado
