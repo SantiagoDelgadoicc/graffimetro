@@ -18,8 +18,8 @@ Meta: el proyecto vacío arranca en el navegador, está en GitHub y tiene Postgr
   - Gemini `gemini-3.5-flash-lite` (modelo fijado, no el alias `-latest`): 15 peticiones/min, 250.000 tokens/min, 500 peticiones/día (panel de AI Studio, 2026-10-15). La cuota es del proyecto "Default Gemini Project", compartida con otros usos.
 - [x] **H03 · Git y GitHub** — repositorio local con `.gitignore` y primer commit subido a GitHub.
   - Preguntar antes: nombre del repositorio; privado o público. → `graffimetro`, público: https://github.com/SantiagoDelgadoicc/graffimetro
-- [ ] **H04 · Proyecto Next.js** — página en blanco funcionando en `localhost`.
-  - Preguntar antes: estilos con Tailwind o con CSS Modules.
+- [x] **H04 · Proyecto Next.js** — página en blanco funcionando en `localhost`.
+  - Preguntar antes: estilos con Tailwind o con CSS Modules. → Tailwind CSS 4.
 - [ ] **H05 · Herramientas de calidad** — ESLint, Prettier y Vitest, con un test de ejemplo en verde.
 - [ ] **H06 · Postgres en Docker** — contenedor arriba y conexión comprobada desde Drizzle.
 
@@ -110,3 +110,4 @@ Meta: demo local probada, pulida y marcada como v0.1.
 - 2026-10-15 · H01 · Node.js v24.20.0 y npm 11.19.0 instalados y comprobados. Sin commit: Git llega en H03. · Completado
 - 2026-10-15 · H02 · Claves de Groq y Gemini en `.env.local`, llamadas de prueba OK con los dos modelos, límites reales anotados. Sin commit: Git llega en H03. · Completado
 - 2026-10-15 · H03 · Repo `graffimetro` público en GitHub; `.gitignore` (claves excluidas) y `.gitattributes` (LF). Primer commit incluye H01-H03. · Completado
+- 2026-10-15 · H04 · Next.js 16.4.1 + React 19.3 + Tailwind 4 (src/, App Router, TypeScript). Página "Graffímetro" en localhost:3000 sin errores; `tsc` OK. Nota para H05: 5 alertas "high" de npm audit en la cadena de ESLint (braces), solo de desarrollo; no aplicar `audit fix --force` (baja eslint-config-next a v14). · Completado

@@ -47,6 +47,12 @@ Si una decisión nueva cambia el diseño, actualiza también la ficha o el docum
 - **Límite:** 10 peticiones por minuto y 300 al día por IP.
 - **Nombres internos:** la tabla de muros se llama `lotes` en la base de datos.
 
+## Next.js 16
+El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), React 19 y Tailwind CSS 4. Esta versión trae cambios importantes respecto a versiones anteriores. Antes de escribir código de Next, lee `AGENTS.md` y la guía correspondiente en `node_modules/next/dist/docs/`.
+
+- Arrancar en desarrollo: `npm run dev` (http://localhost:3000). También está la configuración `graffimetro-dev` en `.claude/launch.json`.
+- Comprobar tipos: `npx tsc --noEmit`.
+
 ## Convenciones
 - Todo el texto del juego va en **español neutro panhispano**, con la voz de Mika (amiga cozy con sorna, que llama "crew" al jugador) y el vocabulario de la ficha: muro, pieza, combo, seguidores, crew.
 - Paleta atardecer pastel como variables CSS: `#B8A4D9`, `#F6B89A`, `#9ED9C3`, `#F7E3A1`, `#F27BAA`, `#2D2A5A`.
