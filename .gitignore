@@ -1,0 +1,32 @@
+# Claves y configuración local (NUNCA se suben)
+.env
+.env.*
+!.env.example
+
+# Dependencias
+node_modules/
+
+# Next.js y compilación
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+*.tsbuildinfo
+
+# Tests y cobertura
+coverage/
+
+# Registros
+npm-debug.log*
+*.log
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Vercel (fases futuras)
+.vercel
