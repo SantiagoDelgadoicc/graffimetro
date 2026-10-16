@@ -13,13 +13,13 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 
-/** Un muro puede ser una categoría cerrada ("Un animal") o una consigna abierta. */
-export const tipoMuro = pgEnum("tipo_muro", ["cerrado", "abierto"]);
+/** Un lote puede ser una categoría cerrada ("Un animal") o una consigna abierta. */
+export const tipoLote = pgEnum("tipo_lote", ["cerrado", "abierto"]);
 
-/** Qué IA hizo la evaluación. */
+/** Qué IA hizo la tasación. */
 export const proveedorIa = pgEnum("proveedor_ia", ["groq", "gemini"]);
 
-/** Catálogo de muros (cada tema que propone Mika). */
+/** Catálogo de lotes (cada consigna que Bartolo saca a subasta). */
 export const lotes = pgTable(
   "lotes",
   {
@@ -27,15 +27,15 @@ export const lotes = pgTable(
     texto: text().notNull(),
     /** Etiqueta corta para el texto de compartir, por ejemplo "Instrumentos". */
     nombreCorto: text("nombre_corto").notNull(),
-    tipo: tipoMuro().notNull(),
+    tipo: tipoLote().notNull(),
     creadoEn: timestamp("creado_en", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [uniqueIndex("lotes_texto_unico").on(t.texto)],
 );
 
 /**
- * Caché de la opinión de la IA: una evaluación por muro y palabra normalizada.
- * No guarda combo ni seguidores, porque dependen también de los datos de jugadores
+ * Caché de la opinión de la IA: una tasación por lote y palabra normalizada.
+ * No guarda martillazos ni precio, porque dependen también de los datos de jugadores
  * y se calculan al jugar (se guardan en `ofertas`).
  */
 export const tasaciones = pgTable(
@@ -64,7 +64,7 @@ export const tasaciones = pgTable(
   ],
 );
 
-/** Cada palabra jugada (incluidos reintentos y muros en blanco), con su resultado. */
+/** Cada oferta jugada (incluidos reintentos y lotes sin oferta), con su resultado. */
 export const ofertas = pgTable(
   "ofertas",
   {
@@ -73,24 +73,28 @@ export const ofertas = pgTable(
     loteId: integer("lote_id")
       .notNull()
       .references(() => lotes.id, { onDelete: "cascade" }),
-    /** Lo que escribió el jugador tal cual. Nulo si el muro quedó en blanco. */
+    /** Lo que escribió el jugador tal cual. Nulo si no hubo oferta. */
     textoEscrito: text("texto_escrito"),
     palabraNormalizada: text("palabra_normalizada"),
     tasacionId: integer("tasacion_id").references(() => tasaciones.id, {
       onDelete: "set null",
     }),
     esReintento: boolean("es_reintento").notNull().default(false),
-    /** Resultado calculado al jugar. Nota y combo son nulos si no hubo palabra válida. */
+    /** Resultado calculado al jugar. Nota y martillazos son nulos si no hubo oferta válida. */
     nota: smallint(),
-    combo: smallint(),
-    seguidores: integer().notNull().default(0),
+    martillazos: smallint(),
+    /** Precio de martillo en centavos ($0,05 = 5; máximo $2.500.000 = 250.000.000). */
+    precioCentavos: integer("precio_centavos").notNull().default(0),
     creadoEn: timestamp("creado_en", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
     index("ofertas_partida_idx").on(t.partidaId),
     index("ofertas_lote_idx").on(t.loteId),
     check("ofertas_nota_rango", sql`${t.nota} is null or ${t.nota} between 0 and 100`),
-    check("ofertas_combo_rango", sql`${t.combo} is null or ${t.combo} between 1 and 7`),
-    check("ofertas_seguidores_positivos", sql`${t.seguidores} >= 0`),
+    check(
+      "ofertas_martillazos_rango",
+      sql`${t.martillazos} is null or ${t.martillazos} between 1 and 7`,
+    ),
+    check("ofertas_precio_positivo", sql`${t.precioCentavos} >= 0`),
   ],
 );

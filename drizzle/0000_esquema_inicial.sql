@@ -1,10 +1,10 @@
 CREATE TYPE "public"."proveedor_ia" AS ENUM('groq', 'gemini');--> statement-breakpoint
-CREATE TYPE "public"."tipo_muro" AS ENUM('cerrado', 'abierto');--> statement-breakpoint
+CREATE TYPE "public"."tipo_lote" AS ENUM('cerrado', 'abierto');--> statement-breakpoint
 CREATE TABLE "lotes" (
 	"id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "lotes_id_seq" INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START WITH 1 CACHE 1),
 	"texto" text NOT NULL,
 	"nombre_corto" text NOT NULL,
-	"tipo" "tipo_muro" NOT NULL,
+	"tipo" "tipo_lote" NOT NULL,
 	"creado_en" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
@@ -17,12 +17,12 @@ CREATE TABLE "ofertas" (
 	"tasacion_id" integer,
 	"es_reintento" boolean DEFAULT false NOT NULL,
 	"nota" smallint,
-	"combo" smallint,
-	"seguidores" integer DEFAULT 0 NOT NULL,
+	"martillazos" smallint,
+	"precio_centavos" integer DEFAULT 0 NOT NULL,
 	"creado_en" timestamp with time zone DEFAULT now() NOT NULL,
 	CONSTRAINT "ofertas_nota_rango" CHECK ("ofertas"."nota" is null or "ofertas"."nota" between 0 and 100),
-	CONSTRAINT "ofertas_combo_rango" CHECK ("ofertas"."combo" is null or "ofertas"."combo" between 1 and 7),
-	CONSTRAINT "ofertas_seguidores_positivos" CHECK ("ofertas"."seguidores" >= 0)
+	CONSTRAINT "ofertas_martillazos_rango" CHECK ("ofertas"."martillazos" is null or "ofertas"."martillazos" between 1 and 7),
+	CONSTRAINT "ofertas_precio_positivo" CHECK ("ofertas"."precio_centavos" >= 0)
 );
 --> statement-breakpoint
 CREATE TABLE "tasaciones" (

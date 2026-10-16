@@ -1,25 +1,25 @@
-# Base de datos local de Graffímetro (solo desarrollo).
+# Base de datos local de La Puja (solo desarrollo).
 # Arrancar: npm run db:up   ·   Parar: npm run db:down
 services:
   db:
     image: postgres:18-alpine
-    container_name: graffimetro-db
+    container_name: la-puja-db
     restart: unless-stopped
     environment:
       # Credenciales solo para desarrollo local; el puerto solo escucha en este PC.
-      POSTGRES_USER: graffimetro
-      POSTGRES_PASSWORD: graffimetro
-      POSTGRES_DB: graffimetro
+      POSTGRES_USER: lapuja
+      POSTGRES_PASSWORD: lapuja
+      POSTGRES_DB: lapuja
     ports:
       - "127.0.0.1:5432:5432"
     volumes:
       # Postgres 18 guarda los datos bajo /var/lib/postgresql/<versión>/.
-      - graffimetro-db-data:/var/lib/postgresql
+      - la-puja-db-data:/var/lib/postgresql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U graffimetro -d graffimetro"]
+      test: ["CMD-SHELL", "pg_isready -U lapuja -d lapuja"]
       interval: 5s
       timeout: 3s
       retries: 10
 
 volumes:
-  graffimetro-db-data:
+  la-puja-db-data:

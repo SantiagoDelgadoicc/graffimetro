@@ -6,9 +6,9 @@ describe("nombreDelNivel", () => {
     expect(NIVELES).toHaveLength(7);
   });
 
-  it("x1 es Tag y x7 es la obra maestra", () => {
-    expect(nombreDelNivel(1)).toBe("Tag");
-    expect(nombreDelNivel(4)).toBe("Pieza");
-    expect(nombreDelNivel(7)).toBe("¡Obra maestra!");
+  it("1 martillazo es basura y 7 rompen el martillo", () => {
+    expect(nombreDelNivel(1)).toBe("Basura de mercadillo");
+    expect(nombreDelNivel(4)).toBe("¡Pujas en la sala!");
+    expect(nombreDelNivel(7)).toBe("¡Se me rompió el martillo!");
   });
 });

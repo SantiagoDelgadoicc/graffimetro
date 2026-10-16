@@ -1,17 +1,17 @@
-/** Nombres de los 7 niveles del graffímetro, de x1 a x7. */
+/** Nombres de los 7 niveles de martillazos, de 1 a 7. */
 export const NIVELES = [
-  "Tag",
-  "Throw-up",
-  "Bubble",
-  "Pieza",
-  "Wildstyle",
-  "Burner",
-  "¡Obra maestra!",
+  "Basura de mercadillo",
+  "Algo es algo",
+  "Buena pieza",
+  "¡Pujas en la sala!",
+  "¡Subasta caliente!",
+  "¡Locura en la sala!",
+  "¡Se me rompió el martillo!",
 ] as const;
 
-export type Combo = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export type Martillazos = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
-/** Nombre del nivel de un combo, por ejemplo 4 → "Pieza". */
-export function nombreDelNivel(combo: Combo): (typeof NIVELES)[number] {
-  return NIVELES[combo - 1];
+/** Nombre del nivel de una oferta, por ejemplo 4 → "¡Pujas en la sala!". */
+export function nombreDelNivel(martillazos: Martillazos): (typeof NIVELES)[number] {
+  return NIVELES[martillazos - 1];
 }
