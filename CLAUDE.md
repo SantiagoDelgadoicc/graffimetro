@@ -68,12 +68,13 @@ El proyecto usa **Next.js 16.4** (App Router, Turbopack, `cacheComponents`), Rea
 - **Catálogo:** los lotes viven en `data/lotes.json`. Para cambiarlos, edita el JSON y ejecuta `npm run db:seed`: valida el catálogo (`src/db/catalogo.ts`, con tests) e inserta o actualiza cada lote según su `numero`, sin duplicar.
 - **Tasar desde la terminal:** `npm run tasar -- <número de lote> "<oferta>"` tasa una oferta real (sin caché ni base de datos); sin argumentos prueba 4 casos; con `--gemini` usa solo Gemini. Cada tasación gasta ~2.000 tokens del límite gratuito de Groq (8.000 por minuto), así que no lances más de 3-4 seguidas.
 - **Lógica de tasación** (`src/tasacion/tasar.ts`): `tasar` prueba Groq y, ante cualquier fallo, responde Gemini. Tras un 429, Groq queda en pausa el `retry-after` que indique (1 s – 10 min). Cada proveedor reintenta una vez si la IA se equivoca de formato, nunca ante un 429.
+- **API de tasación:** `POST /api/tasar` con `{ lote, oferta, partidaId, esReintento? }` (`src/app/api/tasar/route.ts`). La lógica está en `src/tasacion/servicio.ts` (solo servidor, con `server-only`): normaliza, busca en la caché `tasaciones`, si no está tasa con la IA y la guarda, calcula el precio y registra la oferta en `ofertas`. El contrato (petición y respuesta) vive en `src/tasacion/peticion.ts`, con tests.
 - **Scripts de Node** (`scripts/*.mts`): el proyecto es `"type": "module"` y los scripts importan código de `src/` con la extensión `.ts` explícita (`allowImportingTsExtensions`), porque Node ejecuta TypeScript directamente y no resuelve imports sin extensión.
 - **Esquema y migraciones:** el esquema vive en `src/db/schema.ts`. Al cambiarlo, ejecuta `npm run db:generate -- --name <descripcion>` (crea el SQL en `drizzle/`, que no se edita a mano) y luego `npm run db:migrate`. Para ver los datos, `npm run db:studio`. La caché (`tasaciones`) guarda solo la opinión de la IA; los martillazos y el precio se calculan al jugar y se guardan en `ofertas`.
 - Variables de entorno: plantilla en `.env.example` (sin secretos); los valores reales van en `.env.local`.
 - Los tests van junto al código, como `src/**/*.test.ts`. El alias `@/` apunta a `src/`.
 - `npm audit` marca 5 alertas "high" en la cadena de ESLint (`braces`). Son solo de desarrollo; las dependencias de producción tienen 0 vulnerabilidades. No apliques `npm audit fix --force`, porque baja eslint-config-next a la v14 y la rompe.
-- En Windows PowerShell 5.1, no escribas archivos con `Set-Content` ni `Out-File`, porque añaden BOM y estropean las tildes. Usa las herramientas de edición o Node.
+- En Windows PowerShell 5.1, no escribas archivos con `Set-Content` ni `Out-File`, porque añaden BOM y estropean las tildes. Usa las herramientas de edición o Node. Los mensajes de commit con comillas dobles se rompen al pasarlos con `-m`: escríbelos en un archivo y usa `git commit -F <archivo>`.
 
 ## Convenciones
 
