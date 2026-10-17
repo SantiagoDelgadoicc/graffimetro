@@ -1,13 +1,30 @@
 // POST /api/tasar — tasa una oferta: { lote, oferta, partidaId, esReintento? }.
 // Los errores llevan un mensaje en la voz de Bartolo para poder mostrarlo tal cual.
+import { crearLimitador, ipDeLaPeticion, VENTANAS_DEL_JUEGO } from "@/lib/limite";
 import { esquemaPeticion } from "@/tasacion/peticion";
 import { LoteInexistente, OfertaVacia, tasarOferta } from "@/tasacion/servicio";
 
-function error(status: number, mensaje: string) {
-  return Response.json({ error: mensaje }, { status });
+// Un solo limitador por servidor. En desarrollo se guarda en globalThis para que las
+// recargas de Next no reinicien los contadores.
+const global = globalThis as unknown as { limitadorTasar?: ReturnType<typeof crearLimitador> };
+const limitador = (global.limitadorTasar ??= crearLimitador(VENTANAS_DEL_JUEGO));
+
+function error(status: number, mensaje: string, headers?: HeadersInit) {
+  return Response.json({ error: mensaje }, { status, headers });
 }
 
 export async function POST(request: Request) {
+  // Cuenta toda oferta, válida o no, antes de hacer nada más (decidido en el H16).
+  const limite = limitador(ipDeLaPeticion(request.headers));
+  if (!limite.permitido) {
+    const segundos = Math.ceil(limite.reintentarEnMs / 1000);
+    const mensaje =
+      limite.ventana === "minuto"
+        ? `¡Calma, campeón! Esta sala admite diez pujas por minuto. Vuelva en ${segundos} s.`
+        : "Por hoy la sala cierra para usted, pillo: trescientas pujas son muchas. Vuelva mañana.";
+    return error(429, mensaje, { "Retry-After": String(segundos) });
+  }
+
   const cuerpo = await request.json().catch(() => null);
   const peticion = esquemaPeticion.safeParse(cuerpo);
   if (!peticion.success) {
