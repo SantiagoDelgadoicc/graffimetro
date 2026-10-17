@@ -2,6 +2,7 @@
   "name": "la-puja",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,6 +17,7 @@
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down",
     "db:check": "node --env-file=.env.local scripts/db-check.mts",
+    "db:seed": "node --env-file=.env.local scripts/db-seed.mts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"

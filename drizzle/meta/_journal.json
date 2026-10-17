@@ -8,6 +8,13 @@
       "when": 1792194291830,
       "tag": "0000_esquema_inicial",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792195952952,
+      "tag": "0001_lotes_tema_dificultad",
+      "breakpoints": true
     }
   ]
 }

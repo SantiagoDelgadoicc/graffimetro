@@ -1,6 +1,6 @@
 [
   {
-    "n": 1,
+    "numero": 1,
     "texto": "Algo que se vende en rollo",
     "nombreCorto": "En rollo",
     "tipo": "cerrado",
@@ -8,7 +8,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 2,
+    "numero": 2,
     "texto": "Una forma de preparar huevos",
     "nombreCorto": "Huevos",
     "tipo": "cerrado",
@@ -16,7 +16,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 3,
+    "numero": 3,
     "texto": "Una fruta o verdura que empiece por \"P\"",
     "nombreCorto": "Empieza por P",
     "tipo": "cerrado",
@@ -24,7 +24,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 4,
+    "numero": 4,
     "texto": "Algo que se vende en tubo",
     "nombreCorto": "En tubo",
     "tipo": "cerrado",
@@ -32,7 +32,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 5,
+    "numero": 5,
     "texto": "Un oficio que lleva uniforme",
     "nombreCorto": "Con uniforme",
     "tipo": "cerrado",
@@ -40,7 +40,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 6,
+    "numero": 6,
     "texto": "Un electrodoméstico (como la licuadora)",
     "nombreCorto": "Electrodomésticos",
     "tipo": "cerrado",
@@ -48,7 +48,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 7,
+    "numero": 7,
     "texto": "Una salsa o aderezo",
     "nombreCorto": "Salsas",
     "tipo": "cerrado",
@@ -56,7 +56,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 8,
+    "numero": 8,
     "texto": "Un postre que lleve chocolate",
     "nombreCorto": "Postres con chocolate",
     "tipo": "cerrado",
@@ -64,7 +64,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 9,
+    "numero": 9,
     "texto": "Algo que venden en una farmacia, aparte de medicinas",
     "nombreCorto": "Farmacia",
     "tipo": "cerrado",
@@ -72,7 +72,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 10,
+    "numero": 10,
     "texto": "Un vehículo con ruedas que no tenga motor",
     "nombreCorto": "Sin motor",
     "tipo": "cerrado",
@@ -80,7 +80,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 11,
+    "numero": 11,
     "texto": "Una herramienta que se usa con una sola mano",
     "nombreCorto": "Una mano",
     "tipo": "cerrado",
@@ -88,7 +88,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 12,
+    "numero": 12,
     "texto": "Una prenda que se pone por la cabeza",
     "nombreCorto": "Por la cabeza",
     "tipo": "cerrado",
@@ -96,7 +96,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 13,
+    "numero": 13,
     "texto": "Un tipo de pasta (como los espaguetis)",
     "nombreCorto": "Pastas",
     "tipo": "cerrado",
@@ -104,7 +104,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 14,
+    "numero": 14,
     "texto": "Algo que hay en un botiquín",
     "nombreCorto": "Botiquín",
     "tipo": "cerrado",
@@ -112,7 +112,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 15,
+    "numero": 15,
     "texto": "Un plato típico hispano, menos tacos y paella",
     "nombreCorto": "Platos típicos",
     "tipo": "cerrado",
@@ -120,7 +120,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 16,
+    "numero": 16,
     "texto": "Un color con nombre de comida (como mostaza)",
     "nombreCorto": "Colores comestibles",
     "tipo": "cerrado",
@@ -128,7 +128,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 17,
+    "numero": 17,
     "texto": "Una red social o app de mensajes",
     "nombreCorto": "Redes sociales",
     "tipo": "cerrado",
@@ -136,7 +136,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 18,
+    "numero": 18,
     "texto": "Algo que puedes encontrar pegado en un poste",
     "nombreCorto": "En un poste",
     "tipo": "cerrado",
@@ -144,7 +144,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 19,
+    "numero": 19,
     "texto": "Un accesorio que se lleva en la cabeza",
     "nombreCorto": "En la cabeza",
     "tipo": "cerrado",
@@ -152,7 +152,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 20,
+    "numero": 20,
     "texto": "Una función de Instagram (como las historias)",
     "nombreCorto": "Instagram",
     "tipo": "cerrado",
@@ -160,7 +160,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 21,
+    "numero": 21,
     "texto": "Una palabra en inglés que usamos en español (como \"crush\")",
     "nombreCorto": "Anglicismos",
     "tipo": "cerrado",
@@ -168,7 +168,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 22,
+    "numero": 22,
     "texto": "Un lugar de la ciudad donde se puede patinar",
     "nombreCorto": "Spots de skate",
     "tipo": "cerrado",
@@ -176,7 +176,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 23,
+    "numero": 23,
     "texto": "Un género musical nacido en los 90 o los 2000",
     "nombreCorto": "Géneros 90-2000",
     "tipo": "cerrado",
@@ -184,7 +184,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 24,
+    "numero": 24,
     "texto": "Una pieza de un skate o de una bici (como el eje)",
     "nombreCorto": "Piezas de ruedas",
     "tipo": "cerrado",
@@ -192,7 +192,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 25,
+    "numero": 25,
     "texto": "Un aparato de los 2000 que ya nadie usa (como el discman)",
     "nombreCorto": "Gadgets Y2K",
     "tipo": "cerrado",
@@ -200,7 +200,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 26,
+    "numero": 26,
     "texto": "Un baile que se hizo viral, en TikTok o antes",
     "nombreCorto": "Bailes virales",
     "tipo": "cerrado",
@@ -208,7 +208,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 27,
+    "numero": 27,
     "texto": "Algo para pintar un muro que no sea spray",
     "nombreCorto": "Pintar muros",
     "tipo": "cerrado",
@@ -216,7 +216,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 28,
+    "numero": 28,
     "texto": "Una marca de calzado deportivo",
     "nombreCorto": "Calzado deportivo",
     "tipo": "cerrado",
@@ -224,7 +224,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 29,
+    "numero": 29,
     "texto": "Un truco de skate (como el ollie)",
     "nombreCorto": "Trucos de skate",
     "tipo": "cerrado",
@@ -232,7 +232,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 30,
+    "numero": 30,
     "texto": "Un artista de graffiti o arte urbano famoso",
     "nombreCorto": "Artistas urbanos",
     "tipo": "cerrado",
@@ -240,7 +240,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 31,
+    "numero": 31,
     "texto": "Un animal con rayas o manchas",
     "nombreCorto": "Rayas y manchas",
     "tipo": "cerrado",
@@ -248,7 +248,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 32,
+    "numero": 32,
     "texto": "Un animal marino que no sea un pez",
     "nombreCorto": "No es pez",
     "tipo": "cerrado",
@@ -256,7 +256,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 33,
+    "numero": 33,
     "texto": "Un bicho que vuela",
     "nombreCorto": "Bichos voladores",
     "tipo": "cerrado",
@@ -264,7 +264,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 34,
+    "numero": 34,
     "texto": "Una parte del cuerpo que tenemos en par",
     "nombreCorto": "Partes en par",
     "tipo": "cerrado",
@@ -272,7 +272,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 35,
+    "numero": 35,
     "texto": "Algo que cae del cielo",
     "nombreCorto": "Cae del cielo",
     "tipo": "cerrado",
@@ -280,7 +280,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 36,
+    "numero": 36,
     "texto": "Un país de tres sílabas",
     "nombreCorto": "Tres sílabas",
     "tipo": "cerrado",
@@ -288,7 +288,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 37,
+    "numero": 37,
     "texto": "Una flor que no sea la rosa",
     "nombreCorto": "Flores",
     "tipo": "cerrado",
@@ -296,7 +296,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 38,
+    "numero": 38,
     "texto": "Un ave que no vuela",
     "nombreCorto": "Aves sin vuelo",
     "tipo": "cerrado",
@@ -304,7 +304,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 39,
+    "numero": 39,
     "texto": "Un objeto del espacio (como un asteroide)",
     "nombreCorto": "Astros",
     "tipo": "cerrado",
@@ -312,7 +312,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 40,
+    "numero": 40,
     "texto": "Un elemento químico que sea un metal",
     "nombreCorto": "Metales",
     "tipo": "cerrado",
@@ -320,7 +320,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 41,
+    "numero": 41,
     "texto": "Un animal que pone huevos y no es un ave",
     "nombreCorto": "Huevos sin plumas",
     "tipo": "cerrado",
@@ -328,7 +328,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 42,
+    "numero": 42,
     "texto": "Un árbol que no dé fruta",
     "nombreCorto": "Árboles sin fruta",
     "tipo": "cerrado",
@@ -336,7 +336,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 43,
+    "numero": 43,
     "texto": "Un hueso del cuerpo humano",
     "nombreCorto": "Huesos",
     "tipo": "cerrado",
@@ -344,7 +344,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 44,
+    "numero": 44,
     "texto": "Un dinosaurio que no sea el T-Rex",
     "nombreCorto": "Dinosaurios",
     "tipo": "cerrado",
@@ -352,7 +352,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 45,
+    "numero": 45,
     "texto": "Una piedra preciosa o semipreciosa",
     "nombreCorto": "Gemas",
     "tipo": "cerrado",
@@ -360,7 +360,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 46,
+    "numero": 46,
     "texto": "Un deporte que se juega con pelota",
     "nombreCorto": "Con pelota",
     "tipo": "cerrado",
@@ -368,7 +368,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 47,
+    "numero": 47,
     "texto": "Un superpoder de algún superhéroe",
     "nombreCorto": "Superpoderes",
     "tipo": "cerrado",
@@ -376,7 +376,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 48,
+    "numero": 48,
     "texto": "Una golosina de tu infancia",
     "nombreCorto": "Golosinas",
     "tipo": "cerrado",
@@ -384,7 +384,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 49,
+    "numero": 49,
     "texto": "Un juego de recreo que no necesita nada",
     "nombreCorto": "Recreo",
     "tipo": "cerrado",
@@ -392,7 +392,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 50,
+    "numero": 50,
     "texto": "Algo que hay en un cumpleaños infantil",
     "nombreCorto": "Cumpleaños",
     "tipo": "cerrado",
@@ -400,7 +400,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 51,
+    "numero": 51,
     "texto": "Un videojuego de Nintendo",
     "nombreCorto": "Nintendo",
     "tipo": "cerrado",
@@ -408,7 +408,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 52,
+    "numero": 52,
     "texto": "Una película de Pixar",
     "nombreCorto": "Pixar",
     "tipo": "cerrado",
@@ -416,7 +416,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 53,
+    "numero": 53,
     "texto": "Un juego de mesa (como el Monopoly)",
     "nombreCorto": "Juegos de mesa",
     "tipo": "cerrado",
@@ -424,7 +424,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 54,
+    "numero": 54,
     "texto": "Un personaje de Mario Bros. (como Toad)",
     "nombreCorto": "Mundo Mario",
     "tipo": "cerrado",
@@ -432,7 +432,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 55,
+    "numero": 55,
     "texto": "Un lugar del universo de Harry Potter",
     "nombreCorto": "Harry Potter",
     "tipo": "cerrado",
@@ -440,7 +440,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 56,
+    "numero": 56,
     "texto": "Una criatura fantástica que vuela",
     "nombreCorto": "Criaturas voladoras",
     "tipo": "cerrado",
@@ -448,7 +448,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 57,
+    "numero": 57,
     "texto": "Un género de serie o de anime",
     "nombreCorto": "Géneros de series",
     "tipo": "cerrado",
@@ -456,7 +456,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 58,
+    "numero": 58,
     "texto": "Una canción en español de los 2000",
     "nombreCorto": "Hits 2000",
     "tipo": "cerrado",
@@ -464,7 +464,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 59,
+    "numero": 59,
     "texto": "Una posición o jugada del fútbol",
     "nombreCorto": "Jugadas de fútbol",
     "tipo": "cerrado",
@@ -472,7 +472,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 60,
+    "numero": 60,
     "texto": "Un villano de Disney",
     "nombreCorto": "Villanos Disney",
     "tipo": "cerrado",
@@ -480,7 +480,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 61,
+    "numero": 61,
     "texto": "Una excusa para llegar tarde que nadie te creería",
     "nombreCorto": "Excusas",
     "tipo": "abierto",
@@ -488,7 +488,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 62,
+    "numero": 62,
     "texto": "Algo que nunca falta en casa de una abuela",
     "nombreCorto": "Casa de la abuela",
     "tipo": "abierto",
@@ -496,7 +496,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 63,
+    "numero": 63,
     "texto": "Lo primero que comprarías si ganas la lotería",
     "nombreCorto": "Lotería",
     "tipo": "abierto",
@@ -504,7 +504,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 64,
+    "numero": 64,
     "texto": "Si los lunes fueran una comida, ¿cuál serían?",
     "nombreCorto": "Lunes",
     "tipo": "abierto",
@@ -512,7 +512,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 65,
+    "numero": 65,
     "texto": "El plan perfecto para un domingo de lluvia",
     "nombreCorto": "Día de lluvia",
     "tipo": "abierto",
@@ -520,7 +520,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 66,
+    "numero": 66,
     "texto": "El peor regalo para un primer aniversario",
     "nombreCorto": "Mal regalo",
     "tipo": "abierto",
@@ -528,7 +528,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 67,
+    "numero": 67,
     "texto": "Lo que da más vergüenza ajena en una boda",
     "nombreCorto": "Vergüenza ajena",
     "tipo": "abierto",
@@ -536,7 +536,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 68,
+    "numero": 68,
     "texto": "Un nombre para un gato que odia los lunes",
     "nombreCorto": "Gato gruñón",
     "tipo": "abierto",
@@ -544,7 +544,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 69,
+    "numero": 69,
     "texto": "Un olor que te devuelve a tu infancia",
     "nombreCorto": "Olor de infancia",
     "tipo": "abierto",
@@ -552,7 +552,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 70,
+    "numero": 70,
     "texto": "Un superpoder que solo sirva en la cocina",
     "nombreCorto": "Poder de cocina",
     "tipo": "abierto",
@@ -560,7 +560,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 71,
+    "numero": 71,
     "texto": "Un nombre para una crew de graffiti de abuelas",
     "nombreCorto": "Crew de abuelas",
     "tipo": "abierto",
@@ -568,7 +568,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 72,
+    "numero": 72,
     "texto": "Una palabra que pintarías en el muro de tu escuela",
     "nombreCorto": "Mensaje al muro",
     "tipo": "abierto",
@@ -576,7 +576,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 73,
+    "numero": 73,
     "texto": "Lo que suena en tus auriculares de camino a casa",
     "nombreCorto": "Banda sonora",
     "tipo": "abierto",
@@ -584,7 +584,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 74,
+    "numero": 74,
     "texto": "Un apodo para el vecino que taladra los domingos",
     "nombreCorto": "Vecino ruidoso",
     "tipo": "abierto",
@@ -592,7 +592,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 75,
+    "numero": 75,
     "texto": "El nombre de tu banda de música de garaje",
     "nombreCorto": "Banda de garaje",
     "tipo": "abierto",
@@ -600,7 +600,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 76,
+    "numero": 76,
     "texto": "Un nombre para la tabla de skate de tu mascota",
     "nombreCorto": "Tabla de mascota",
     "tipo": "abierto",
@@ -608,7 +608,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 77,
+    "numero": 77,
     "texto": "Una palabra que suene a 2003",
     "nombreCorto": "Vibra Y2K",
     "tipo": "abierto",
@@ -616,7 +616,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 78,
+    "numero": 78,
     "texto": "Lo que guardarías en una cápsula del tiempo para el 2050",
     "nombreCorto": "Cápsula del tiempo",
     "tipo": "abierto",
@@ -624,7 +624,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 79,
+    "numero": 79,
     "texto": "Algo que ves desde una azotea al atardecer",
     "nombreCorto": "Azotea",
     "tipo": "abierto",
@@ -632,7 +632,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 80,
+    "numero": 80,
     "texto": "Una palabra que rime con \"muro\"",
     "nombreCorto": "Rima con muro",
     "tipo": "abierto",
@@ -640,7 +640,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 81,
+    "numero": 81,
     "texto": "Lo único que extrañarías de la Tierra viviendo en Marte",
     "nombreCorto": "Desde Marte",
     "tipo": "abierto",
@@ -648,7 +648,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 82,
+    "numero": 82,
     "texto": "Un animal que sería el peor compañero de piso",
     "nombreCorto": "Compañero de piso",
     "tipo": "abierto",
@@ -656,7 +656,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 83,
+    "numero": 83,
     "texto": "Algo que nadie espera encontrar en el fondo del mar",
     "nombreCorto": "Fondo del mar",
     "tipo": "abierto",
@@ -664,7 +664,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 84,
+    "numero": 84,
     "texto": "Lo que más miedo te daría escuchar en un bosque de noche",
     "nombreCorto": "Bosque de noche",
     "tipo": "abierto",
@@ -672,7 +672,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 85,
+    "numero": 85,
     "texto": "Algo que se derrite y no es comida",
     "nombreCorto": "Se derrite",
     "tipo": "abierto",
@@ -680,7 +680,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 86,
+    "numero": 86,
     "texto": "La primera palabra que diría tu mascota si hablara",
     "nombreCorto": "Mascota habla",
     "tipo": "abierto",
@@ -688,7 +688,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 87,
+    "numero": 87,
     "texto": "Algo que te gustaría que brillara en la oscuridad",
     "nombreCorto": "Brilla de noche",
     "tipo": "abierto",
@@ -696,7 +696,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 88,
+    "numero": 88,
     "texto": "Un nombre para una estrella recién descubierta",
     "nombreCorto": "Estrella nueva",
     "tipo": "abierto",
@@ -704,7 +704,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 89,
+    "numero": 89,
     "texto": "Un invento que arreglaría tu mañana",
     "nombreCorto": "Invento futuro",
     "tipo": "abierto",
@@ -712,7 +712,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 90,
+    "numero": 90,
     "texto": "Una palabra para el olor de la lluvia sobre el asfalto",
     "nombreCorto": "Olor a lluvia",
     "tipo": "abierto",
@@ -720,7 +720,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 91,
+    "numero": 91,
     "texto": "Lo único que llevarías a una isla desierta",
     "nombreCorto": "Isla desierta",
     "tipo": "abierto",
@@ -728,7 +728,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 92,
+    "numero": 92,
     "texto": "Algo que no puede faltar en una pijamada",
     "nombreCorto": "Pijamada",
     "tipo": "abierto",
@@ -736,7 +736,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 93,
+    "numero": 93,
     "texto": "El snack perfecto para una maratón de anime",
     "nombreCorto": "Snack de anime",
     "tipo": "abierto",
@@ -744,7 +744,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 94,
+    "numero": 94,
     "texto": "Lo que harías si se va la luz en toda la ciudad",
     "nombreCorto": "Apagón",
     "tipo": "abierto",
@@ -752,7 +752,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 95,
+    "numero": 95,
     "texto": "El premio más raro que ganarías en una feria",
     "nombreCorto": "Premio de feria",
     "tipo": "abierto",
@@ -760,7 +760,7 @@
     "dificultad": "facil"
   },
   {
-    "n": 96,
+    "numero": 96,
     "texto": "El plan secreto de un villano de caricatura",
     "nombreCorto": "Plan de villano",
     "tipo": "abierto",
@@ -768,7 +768,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 97,
+    "numero": 97,
     "texto": "Un nombre para un videojuego de skate",
     "nombreCorto": "Juego de skate",
     "tipo": "abierto",
@@ -776,7 +776,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 98,
+    "numero": 98,
     "texto": "Un trofeo que te darían en tu casa",
     "nombreCorto": "Trofeo casero",
     "tipo": "abierto",
@@ -784,7 +784,7 @@
     "dificultad": "medio"
   },
   {
-    "n": 99,
+    "numero": 99,
     "texto": "Un hechizo para ordenar tu cuarto",
     "nombreCorto": "Hechizo",
     "tipo": "abierto",
@@ -792,7 +792,7 @@
     "dificultad": "dificil"
   },
   {
-    "n": 100,
+    "numero": 100,
     "texto": "La última palabra de una película de terror",
     "nombreCorto": "Final de peli",
     "tipo": "abierto",

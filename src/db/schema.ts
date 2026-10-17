@@ -14,7 +14,20 @@ import {
 } from "drizzle-orm/pg-core";
 
 /** Un lote puede ser una categoría cerrada ("Un animal") o una consigna abierta. */
-export const tipoLote = pgEnum("tipo_lote", ["cerrado", "abierto"]);
+export const TIPOS_LOTE = ["cerrado", "abierto"] as const;
+export const tipoLote = pgEnum("tipo_lote", TIPOS_LOTE);
+
+/** Los cuatro temas del catálogo (25 lotes cada uno). */
+export const TEMAS_LOTE = [
+  "vida-cotidiana",
+  "urbano-y2k",
+  "naturaleza-ciencia",
+  "pop-ocio",
+] as const;
+export const temaLote = pgEnum("tema_lote", TEMAS_LOTE);
+
+export const DIFICULTADES_LOTE = ["facil", "medio", "dificil"] as const;
+export const dificultadLote = pgEnum("dificultad_lote", DIFICULTADES_LOTE);
 
 /** Qué IA hizo la tasación. */
 export const proveedorIa = pgEnum("proveedor_ia", ["groq", "gemini"]);
@@ -24,13 +37,20 @@ export const lotes = pgTable(
   "lotes",
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    /** Número del lote en `data/lotes.json`; la semilla lo usa para actualizar sin duplicar. */
+    numero: smallint().notNull(),
     texto: text().notNull(),
     /** Etiqueta corta para el texto de compartir, por ejemplo "Instrumentos". */
     nombreCorto: text("nombre_corto").notNull(),
     tipo: tipoLote().notNull(),
+    tema: temaLote().notNull(),
+    dificultad: dificultadLote().notNull(),
     creadoEn: timestamp("creado_en", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [uniqueIndex("lotes_texto_unico").on(t.texto)],
+  (t) => [
+    uniqueIndex("lotes_numero_unico").on(t.numero),
+    uniqueIndex("lotes_texto_unico").on(t.texto),
+  ],
 );
 
 /**
