@@ -1,21 +1,21 @@
 // Escaleras de calibración validadas por el usuario en el H11.
 // Le enseñan a la IA qué vale cada martillazo, del 1 al 7, con varios ejemplos por peldaño.
 // La IA no decide martillazos: devuelve rareza e ingenio (0-100) y el código calcula el resto.
-// Por eso cada peldaño lleva una puntuación de referencia para la dimensión que más pesa.
-// Esas referencias son el centro de tramos de 15 puntos; los tramos definitivos se fijan
-// en el H14 y, si cambian, hay que actualizar REFERENCIA_POR_MARTILLAZO.
+// Por eso cada peldaño lleva una puntuación de referencia para la dimensión que más pesa:
+// el centro de su tramo de nota (TRAMOS_DE_NOTA, decididos en el H14). Un test comprueba
+// que cada referencia cae dentro de su tramo, para que no se desalineen.
 
 import type { Martillazos } from "@/lib/juego";
 
-/** Puntuación orientativa (0-100) del centro de cada peldaño. */
+/** Puntuación orientativa (0-100) de cada peldaño: el centro de su tramo de nota. */
 export const REFERENCIA_POR_MARTILLAZO: Record<Martillazos, number> = {
-  1: 7,
-  2: 22,
-  3: 37,
-  4: 52,
-  5: 67,
-  6: 82,
-  7: 95,
+  1: 10,
+  2: 30,
+  3: 47,
+  4: 62,
+  5: 76,
+  6: 88,
+  7: 97,
 };
 
 export type Peldano = {

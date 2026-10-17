@@ -77,8 +77,8 @@ describe("prompt de tasación", () => {
   });
 
   it("cada peldaño lleva su puntuación de referencia", () => {
-    expect(INSTRUCCIONES_TASACION).toContain("rareza ≈ 7: cebra");
-    expect(INSTRUCCIONES_TASACION).toContain("ingenio ≈ 95: el lunes me secuestró");
+    expect(INSTRUCCIONES_TASACION).toContain("rareza ≈ 10: cebra");
+    expect(INSTRUCCIONES_TASACION).toContain("ingenio ≈ 97: el lunes me secuestró");
   });
 
   it("el mensaje lleva el lote, su tipo y la oferta entre etiquetas", () => {
