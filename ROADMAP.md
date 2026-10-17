@@ -39,7 +39,8 @@ Meta: la base de datos tiene sus tablas y los 100 lotes validados están cargado
 
 Meta: una oferta enviada a la API vuelve tasada (nota, martillazos, precio, comentario de Bartolo), cacheada y registrada, todavía sin interfaz.
 
-- [ ] **H10 · Normalización básica** — función que unifica mayúsculas, espacios y tildes, con tests.
+- [x] **H10 · Normalización básica** — función que unifica mayúsculas, espacios y tildes, con tests.
+  - Decidido con el usuario: se conservan tildes y ñ ("papá" ≠ "papa"; solo se unifica su codificación Unicode) y se quita la puntuación de los bordes, no la interior.
 - [ ] **H11 · Prompt de tasación** — prompt + esquema `zod` (válida, forma canónica, rareza, ingenio, comentario) y guía de estilo de Bartolo.
   - Preguntar antes: ejemplos de calibración (palabras que valen 1, 4 y 7 martillazos para el usuario); cómo puntuar la palabra que da el ejemplo del lote ("como el ollie").
 - [ ] **H12 · Conexión con Groq** — tasación real con `openai/gpt-oss-120b` desde un script.
@@ -127,3 +128,4 @@ Meta: demo local probada, pulida y marcada como v0.1.
 - 2026-10-15 · H08 · Catálogo de 100 muros (60 cerrados, 40 abiertos; 25 por tema; 50/35/15 de dificultad), reescrito con "ganchos" al estilo Krillion (restricción, contenedor, pista, nicho, exclusión) y validado por el usuario. Marcas y obras conocidas permitidas. Guardado en `data/muros.json` (100 textos únicos, comprobado). `npm run check` en verde. · Completado
 - 2026-10-16 · — · Separación en dos juegos: este proyecto vuelve a ser **La Puja** (ficha reactivada; sonido revisado: se mantiene el power stab con el mazo, música de ragtime de salón adaptativo, monedas realistas con brillo). Mika, su música y su estética pasan a un juego de Steam aparte (traspaso: https://claude.ai/code/artifact/da6d406b-f3cf-45b9-879f-30c4bc47de3f). Código adaptado: niveles de martillazos, `ofertas.martillazos` y `precio_centavos`, enum `tipo_lote`, migración inicial regenerada (no había datos), base `lapuja` en el contenedor `la-puja-db`, `data/lotes.json`, repo renombrado a `la-puja`. Fases 2-5 y futuras reescritas para La Puja. · Siguiente: H09
 - 2026-10-16 · H09 · Columnas `numero` (única), `tema` y `dificultad` en `lotes` (migración `0001_lotes_tema_dificultad`). Validador `src/db/catalogo.ts` con 7 tests (incluido el reparto del catálogo real). `npm run db:seed` hace upsert por número: tres ejecuciones dejan 100 lotes, sin duplicados. `"type": "module"` en package.json e imports `.ts` explícitos para los scripts de Node; build de Next, drizzle-kit y Vitest comprobados. · Completado
+- 2026-10-16 · H10 · `normalizarOferta` (`src/lib/normalizar.ts`): NFC, sin invisibles, minúsculas, espacios unificados y sin puntuación en los bordes; conserva tildes, ñ y puntuación interior (decisión del usuario). 11 tests; `npm run check` en verde (20 tests). Doc técnico actualizado. · Completado
